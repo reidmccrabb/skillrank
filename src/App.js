@@ -14,7 +14,7 @@ function App() {
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2B",
       openings: "10,000",
-      workers: "500,000",
+      workers: "510,230",
     },
     {
       name: "Web Developer",
@@ -23,8 +23,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "9,080",
+      workers: "490,070",
     },
     {
       name: "Brain Surgeon",
@@ -33,8 +33,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "19,020",
+      workers: "690,033",
     },
     {
       name: "Comedy Actor",
@@ -43,8 +43,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "1,400",
+      workers: "120,331",
     },
     {
       name: "University Professor",
@@ -53,8 +53,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "2,302",
+      workers: "42,090",
     },
     {
       name: "Air Traffic Controller",
@@ -63,8 +63,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "10,177",
+      workers: "1,992",
     },
     {
       name: "Blockchain Developer",
@@ -73,8 +73,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "80,197",
+      workers: "40,101",
     },
     {
       name: "UX/UI Designer",
@@ -83,8 +83,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "99,803",
+      workers: "190,050",
     },
     {
       name: "Psychologist",
@@ -94,7 +94,7 @@ function App() {
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000",
+      workers: "466,010",
     },
     {
       name: "Financial Analyst",
@@ -103,8 +103,8 @@ function App() {
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
       marketValue: "$2.5B",
-      openings: "9,000",
-      workers: "490,000",
+      openings: "92,300",
+      workers: "490,049",
     },
   ];
 
