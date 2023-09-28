@@ -112,18 +112,18 @@ function App() {
       setSkills(prevSkills => 
         prevSkills.map(skill => ({
           ...skill,
-          avgSalary: `$${(parseFloat(skill.avgSalary.replace('$', '').replace(',', '')) + Math.random() * 1000 - 500).toFixed(2)}`,
-          oneDayChange: `${(parseFloat(skill.oneDayChange) + Math.random() * 2 - 1).toFixed(2)}%`,
-          sevenDayChange: `${(parseFloat(skill.sevenDayChange) + Math.random() * 2 - 1).toFixed(2)}%`,
-          oneYearChange: `${(parseFloat(skill.oneYearChange) + Math.random() * 2 - 1).toFixed(2)}%`,
-          marketValue: `$${(parseFloat(skill.marketValue.replace('$', '').replace('B', '')) + Math.random() * 0.1 - 0.05).toFixed(1)}B`,
-          openings: `${(parseFloat(skill.openings.replace(',', '')) + Math.random() * 100 - 50).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
+          avgSalary: `$${(parseFloat(skill.avgSalary.replace('$', '').replace(',', '')) + Math.random() * 500 - 250).toFixed(2)}`,
+          oneDayChange: `${(parseFloat(skill.oneDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
+          sevenDayChange: `${(parseFloat(skill.sevenDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
+          oneYearChange: `${(parseFloat(skill.oneYearChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
+          marketValue: `$${(parseFloat(skill.marketValue.replace('$', '').replace('B', '')) + Math.random() * 0.05 - 0.025).toFixed(1)}B`,
+          openings: `${(parseFloat(skill.openings.replace(',', '')) + Math.random() * 50 - 25).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
           workers: `${(parseFloat(skill.workers.replace(',', '')) + Math.random() * 1000 - 500).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
         }))
       );
     };
 
-    const intervalId = setInterval(tickSkills, 3000);  // Update every 3 seconds
+    const intervalId = setInterval(tickSkills, 5000);  // Update every 5 seconds
 
     return () => clearInterval(intervalId);  // Cleanup on unmount
   }, []);
