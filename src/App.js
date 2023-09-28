@@ -1,47 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
   const initialSkills = [
     {
-      name: "Software Development",
-      avgSalary: "$120,000",
+      name: "AI Engineer",
+      avgSalary: "$320,000",
       oneDayChange: "+2%",
       sevenDayChange: "-1%",
       oneYearChange: "+10%",
       marketValue: "$2B",
       openings: "10,000",
-      workers: "500,000"
+      workers: "500,000",
     },
     {
-      name: "Machine Learning",
+      name: "Web Developer",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
-      name: "Data Analysis",
+      name: "Brain Surgeon",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
-      name: "Digital Marketing",
+      name: "Comedy Actor",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "Sales",
@@ -51,7 +51,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "Project Management",
@@ -61,7 +61,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "Blockchain Development",
@@ -71,7 +71,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "UX/UI Designer",
@@ -81,7 +81,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "Cloud Computing",
@@ -91,7 +91,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
     {
       name: "Financial Analyst",
@@ -101,7 +101,7 @@ function App() {
       oneYearChange: "+11%",
       marketValue: "$2.5B",
       openings: "9,000",
-      workers: "490,000"
+      workers: "490,000",
     },
   ];
 
@@ -109,24 +109,57 @@ function App() {
 
   useEffect(() => {
     const tickSkills = () => {
-      setSkills(prevSkills => 
-        prevSkills.map(skill => ({
+      setSkills((prevSkills) =>
+        prevSkills.map((skill) => ({
           ...skill,
-          avgSalary: `$${(parseFloat(skill.avgSalary.replace('$', '').replace(',', '')) + Math.random() * 500 - 250).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
-
-          oneDayChange: `${(parseFloat(skill.oneDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
-          sevenDayChange: `${(parseFloat(skill.sevenDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
-          oneYearChange: `${(parseFloat(skill.oneYearChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
-          marketValue: `$${(parseFloat(skill.marketValue.replace('$', '').replace('B', '')) + Math.random() * 0.05 - 0.025).toFixed(1)}B`,
-          openings: `${(parseFloat(skill.openings.replace(',', '')) + Math.random() * 50 - 25).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
-          workers: `${(parseFloat(skill.workers.replace(',', '')) + Math.random() * 1000 - 500).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
+          avgSalary: `$${(
+            parseFloat(skill.avgSalary.replace("$", "").replace(",", "")) +
+            Math.random() * 500 -
+            250
+          )
+            .toFixed(2)
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
+          oneDayChange: `${(
+            parseFloat(skill.oneDayChange) +
+            Math.random() * 0.4 -
+            0.2
+          ).toFixed(2)}%`,
+          sevenDayChange: `${(
+            parseFloat(skill.sevenDayChange) +
+            Math.random() * 0.4 -
+            0.2
+          ).toFixed(2)}%`,
+          oneYearChange: `${(
+            parseFloat(skill.oneYearChange) +
+            Math.random() * 0.4 -
+            0.2
+          ).toFixed(2)}%`,
+          marketValue: `$${(
+            parseFloat(skill.marketValue.replace("$", "").replace("B", "")) +
+            Math.random() * 0.05 -
+            0.025
+          ).toFixed(1)}B`,
+          openings: `${(
+            parseFloat(skill.openings.replace(",", "")) +
+            Math.random() * 50 -
+            25
+          )
+            .toFixed(0)
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
+          workers: `${(
+            parseFloat(skill.workers.replace(",", "")) +
+            Math.random() * 1000 -
+            500
+          )
+            .toFixed(0)
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
         }))
       );
     };
 
-    const intervalId = setInterval(tickSkills, 5000);  // Update every 5 seconds
+    const intervalId = setInterval(tickSkills, 5000); // Update every 5 seconds
 
-    return () => clearInterval(intervalId);  // Cleanup on unmount
+    return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
 
   return (
@@ -146,9 +179,21 @@ function App() {
             <span>Total # of Workers</span>
           </div>
           {skills.map((skill, index) => (
-          <div className="skill-item" key={index}>
-          <span className="rank">{index + 1}</span>
-          <img src={`${process.env.PUBLIC_URL}/ai.png`} alt="Skill Icon" className="skill-icon" />
+            <div className="skill-item" key={index}>
+              <span className="rank">{index + 1}</span>
+              <img
+                src={`${process.env.PUBLIC_URL}/${
+                  skill.name === "Web Developer"
+                    ? "webdev.png"
+                    : skill.name === "Comedy Actor"
+                    ? "comedy.png"
+                    : skill.name === "Brain Surgeon"
+                    ? "brain.png"
+                    : "ai.png"
+                }`}
+                alt="Skill Icon"
+                className="skill-icon"
+              />
 
               <span className="skill-name">{skill.name}</span>
               <span>{skill.avgSalary}</span>
