@@ -33,7 +33,6 @@ h1 {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-
   border-top: 1px solid #F0F2F5;  /* Added this line */
   font-weight: bold;
 }
@@ -47,6 +46,11 @@ h1 {
 .rank, .header-row > span:nth-child(1) {
   flex: 1;
   font-weight: bold;
+}
+
+.skill-item .rank {       /* New style for the actual rank numbers */
+  font-weight: normal;
+  color: #716f6f;  /* light gray color */
 }
 
 .skill-name, .header-row > span:nth-child(2) {
