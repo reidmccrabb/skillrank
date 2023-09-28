@@ -110,6 +110,10 @@ function App() {
 
   const [skills, setSkills] = useState(initialSkills);
 
+  function getChangeStyle(percentage) {
+    return percentage.startsWith("-") ? "red" : "green";
+  }
+
   useEffect(() => {
     const updateSingleSkill = (index) => {
       setSkills((prevSkills) => {
@@ -248,9 +252,18 @@ function App() {
 
                           <span className="skill-name">{skill.name}</span>
                           <span>{skill.avgSalary}</span>
-                          <span>{skill.oneDayChange}</span>
-                          <span>{skill.sevenDayChange}</span>
-                          <span>{skill.oneYearChange}</span>
+                          <span className={getChangeStyle(skill.oneDayChange)}>
+                            {skill.oneDayChange}
+                          </span>
+                          <span
+                            className={getChangeStyle(skill.sevenDayChange)}
+                          >
+                            {skill.sevenDayChange}
+                          </span>
+                          <span className={getChangeStyle(skill.oneYearChange)}>
+                            {skill.oneYearChange}
+                          </span>
+
                           <span>{skill.marketValue}</span>
                           <span>{skill.openings}</span>
                           <span>{skill.workers}</span>
