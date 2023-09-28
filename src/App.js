@@ -106,6 +106,56 @@ function App() {
       openings: "92,300",
       workers: "490,049",
     },
+    {
+      name: "Chef",
+      avgSalary: "$106,200",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2.5B",
+      openings: "92,300",
+      workers: "490,049",
+    },
+    {
+      name: "Yoga Instructor",
+      avgSalary: "$106,200",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2.5B",
+      openings: "92,300",
+      workers: "490,049",
+    },
+    {
+      name: "Physical Therapist",
+      avgSalary: "$106,200",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2.5B",
+      openings: "92,300",
+      workers: "490,049",
+    },
+    {
+      name: "Novelist",
+      avgSalary: "$106,200",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2.5B",
+      openings: "92,300",
+      workers: "490,049",
+    },
+    {
+      name: "Animator",
+      avgSalary: "$106,200",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2.5B",
+      openings: "92,300",
+      workers: "490,049",
+    },
   ];
 
   const [skills, setSkills] = useState(initialSkills);
@@ -245,10 +295,20 @@ function App() {
                                 ? "ui.png"
                                 : skill.name === "Financial Analyst"
                                 ? "finance.png"
+                                : skill.name === "Chef"
+                                ? "chef.png"
+                                : skill.name === "Animator"
+                                ? "animate.png"
                                 : skill.name === "Blockchain Developer"
                                 ? "blockchain.png"
+                                : skill.name === "Novelist"
+                                ? "book.png"
                                 : skill.name === "Comedy Actor"
                                 ? "comedy.png"
+                                : skill.name === "Yoga Instructor"
+                                ? "lotus.png"
+                                : skill.name === "Physical Therapist"
+                                ? "therapist.png"
                                 : skill.name === "Psychologist"
                                 ? "psychology.png"
                                 : skill.name === "University Professor"
