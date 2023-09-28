@@ -118,7 +118,7 @@ function App() {
     const updateSingleSkill = (index) => {
       setSkills((prevSkills) => {
         const skill = prevSkills[index];
-        return [
+        const updatedSkills = [
           ...prevSkills.slice(0, index),
           {
             ...skill,
@@ -166,6 +166,19 @@ function App() {
           },
           ...prevSkills.slice(index + 1),
         ];
+
+        // Sort the updated skills by average salary in descending order
+        updatedSkills.sort((a, b) => {
+          const aSalary = parseFloat(
+            a.avgSalary.replace("$", "").replace(",", "")
+          );
+          const bSalary = parseFloat(
+            b.avgSalary.replace("$", "").replace(",", "")
+          );
+          return bSalary - aSalary;
+        });
+
+        return updatedSkills;
       });
     };
 
