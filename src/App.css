@@ -115,3 +115,46 @@ h1 {
 .courses-section {
   border-left: 1px solid #e5e5e5; /* Adds a vertical divider between sections */
 }
+.details-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.skill-details,
+.news-section,
+.courses-section {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.news-section,
+.courses-section {
+  border-left: 1px solid #e5e5e5;
+}
+
+/* Styling for news articles */
+.news-article {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+}
+
+.news-image {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.news-article h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.news-article a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.news-article a:hover {
+  text-decoration: underline;
+}

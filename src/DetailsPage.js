@@ -27,7 +27,13 @@ function DetailsPage({ skills }) {
 
             <div className="news-section">
                 <h3>News on {skill.name}</h3>
-                {/* Add your news content here */}
+                <article className="news-article">
+                    <img src="/sample-news-image.jpg" alt="Sample News" className="news-image" />
+                    <h4>The Rise of the {skill.name} role in 2023</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at odio nec ligula facilisis lacinia.</p>
+                    <a href="/news-article-1">Read more</a>
+                </article>
+                {/* ... you can add more articles in a similar format */}
             </div>
 
             <div className="courses-section">
