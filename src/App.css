@@ -37,6 +37,7 @@ h1 {
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #000000;
+  font-weight: bold;
 }
 
 .header-row {
@@ -61,4 +62,9 @@ h1 {
 .header-row > span:not(:nth-child(1)):not(:nth-child(2)), 
 .skill-item > span:not(.rank):not(.skill-name) {
   flex: 1;
+}
+.skill-icon {
+  height: 20px;           /* Adjust the height as required */
+  width: auto;
+  margin-right: 8px;      /* Add some spacing between the icon and skill name */
 }

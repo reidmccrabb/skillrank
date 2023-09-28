@@ -145,8 +145,10 @@ function App() {
             <span>Total # of Workers</span>
           </div>
           {skills.map((skill, index) => (
-            <div className="skill-item" key={index}>
-              <span className="rank">{index + 1}</span>
+          <div className="skill-item" key={index}>
+          <span className="rank">{index + 1}</span>
+          <img src={`${process.env.PUBLIC_URL}/ai.png`} alt="Skill Icon" className="skill-icon" />
+
               <span className="skill-name">{skill.name}</span>
               <span>{skill.avgSalary}</span>
               <span>{skill.oneDayChange}</span>
