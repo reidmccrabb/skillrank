@@ -47,7 +47,7 @@ function App() {
       workers: "490,000",
     },
     {
-      name: "Sales",
+      name: "University Professor",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
@@ -57,7 +57,7 @@ function App() {
       workers: "490,000",
     },
     {
-      name: "Project Management",
+      name: "Air Traffic Controller",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
@@ -67,7 +67,7 @@ function App() {
       workers: "490,000",
     },
     {
-      name: "Blockchain Development",
+      name: "Blockchain Developer",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
@@ -87,7 +87,7 @@ function App() {
       workers: "490,000",
     },
     {
-      name: "Cloud Computing",
+      name: "Psychologist",
       avgSalary: "$130,000",
       oneDayChange: "+1%",
       sevenDayChange: "-2%",
@@ -224,8 +224,20 @@ function App() {
                             src={`${process.env.PUBLIC_URL}/${
                               skill.name === "Web Developer"
                                 ? "webdev.png"
+                                : skill.name === "UX/UI Designer"
+                                ? "ui.png"
+                                : skill.name === "Financial Analyst"
+                                ? "finance.png"
+                                : skill.name === "Blockchain Developer"
+                                ? "blockchain.png"
                                 : skill.name === "Comedy Actor"
                                 ? "comedy.png"
+                                : skill.name === "Psychologist"
+                                ? "psychology.png"
+                                : skill.name === "University Professor"
+                                ? "dean.png"
+                                : skill.name === "Air Traffic Controller"
+                                ? "airport.png"
                                 : skill.name === "Brain Surgeon"
                                 ? "brain.png"
                                 : "ai.png"
