@@ -1,38 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #f8f8f8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skills-list {
+  width: 100%; /* Set to 100% for full width */
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item, .header-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.header-row {
+  font-weight: bold;
+  background-color: #e1e1e1;
+}
+
+.skill-item:last-child {
+  border-bottom: none;
+}
+
+.rank, .header-row > span:nth-child(1) {
+  flex: 1;
+  font-weight: bold;
+}
+
+.skill-name, .header-row > span:nth-child(2) {
+  flex: 3;
+}
+
+/* Make sure other columns also have matching flex values. For simplicity, let's assume each of the other columns also takes up flex of 1 */
+.header-row > span:not(:nth-child(1)):not(:nth-child(2)), 
+.skill-item > span:not(.rank):not(.skill-name) {
+  flex: 1;
 }
