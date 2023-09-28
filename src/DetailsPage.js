@@ -1,21 +1,24 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
-function DetailsPage() {
-  // Use the navigate function from the useNavigate hook
-  const navigate = useNavigate();
+function DetailsPage({ skills }) {
+    const { skillName } = useParams();
 
-  return (
-    <div className="details-page">
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        {/* Back to Home Button */}
-        <button onClick={() => navigate('/')}>Back to Home</button>
-      </div>
+    const skill = skills.find(s => s.name.replace(/\s+/g, "-").toLowerCase() === skillName);
 
-      <h1>Details for AI Engineer slat</h1>
-      {/* Add your detailed content here */}
-    </div>
-  );
+    if (!skill) {
+        return <div>Skill not found!</div>;
+    }
+
+    // Render skill details
+    return (
+        <div>
+            <h2>{skill.name}</h2>
+            <p>Avg. Salary: {skill.avgSalary}</p>
+            <p>1 Day % Change: {skill.oneDayChange}</p>
+            <p>7 Day % Change: {skill.sevenDayChange}</p>
+            {/* ... add more details here */}
+        </div>
+    );
 }
 
 export default DetailsPage;

@@ -167,14 +167,16 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <h1>Skill Rank</h1>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <div className="skills-list">
-            <div className="header-row">
+        <div className="App">
+            <header className="App-header">
+                <h1>Skill Rank</h1>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <div className="skills-list">
+                                    <div className="header-row">
               <span>Rank (#)</span>
               <span>Skill Name</span>
               <span>Avg. Salary</span>
@@ -186,17 +188,12 @@ function App() {
               <span>Total # of Workers</span>
             </div>
             {skills.map((skill, index) => (
-  <Link
-  className="skill-link"
-  to={skill.name === "AI Engineer" ? "/details" : "#"}
-                    onClick={(e) => {
-                      if (skill.name !== "AI Engineer") {
-                        e.preventDefault();
-                      }
-                    }}
-                    key={index}
-                  >
-                <div className="skill-item">
+                                            <Link
+                                                className="skill-link"
+                                                to={`/details/${skill.name.replace(/\s+/g, "-").toLowerCase()}`}
+                                                key={index}
+                                            >
+                                                <div className="skill-item">
                   <span className="rank">{index + 1}</span>
                   <img
                     src={`${process.env.PUBLIC_URL}/${
@@ -220,18 +217,22 @@ function App() {
                   <span>{skill.marketValue}</span>
                   <span>{skill.openings}</span>
                   <span>{skill.workers}</span>
-                </div>
-                </Link>
-                ))}
-              </div>
-            </>
-          } />
-          <Route path="/details" element={<DetailsPage />} />
-        </Routes>
-      </header>
-    </div>
-  </Router>
-);
+                  </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </>
+                            }
+                        />
+                        <Route
+                            path="/details/:skillName"
+                            element={<DetailsPage skills={skills} />}
+                        />
+                    </Routes>
+                </header>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
