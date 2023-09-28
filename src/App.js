@@ -15,6 +15,7 @@ function App() {
       marketValue: "$2B",
       openings: "10,000",
       workers: "510,230",
+      category: "technology",
     },
     {
       name: "Web Developer",
@@ -25,6 +26,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "9,080",
       workers: "490,070",
+      category: "technology",
     },
     {
       name: "Brain Surgeon",
@@ -35,6 +37,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "19,020",
       workers: "690,033",
+      category: "healthcare",
     },
     {
       name: "Comedy Actor",
@@ -55,6 +58,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "2,302",
       workers: "42,090",
+      category: "education",
     },
     {
       name: "Air Traffic Controller",
@@ -75,6 +79,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "80,197",
       workers: "40,101",
+      category: "technology",
     },
     {
       name: "UX/UI Designer",
@@ -85,6 +90,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "99,803",
       workers: "190,050",
+      category: "technology",
     },
     {
       name: "Psychologist",
@@ -95,6 +101,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "9,000",
       workers: "466,010",
+      category: "healthcare",
     },
     {
       name: "Financial Analyst",
@@ -105,6 +112,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "92,300",
       workers: "490,049",
+      category: "finance",
     },
     {
       name: "Chef",
@@ -125,6 +133,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "92,300",
       workers: "490,049",
+      category: "education",
     },
     {
       name: "Physical Therapist",
@@ -135,6 +144,7 @@ function App() {
       marketValue: "$2.5B",
       openings: "92,300",
       workers: "490,049",
+      category: "healthcare",
     },
     {
       name: "Novelist",
@@ -159,6 +169,12 @@ function App() {
   ];
 
   const [skills, setSkills] = useState(initialSkills);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredSkills =
+    selectedCategory === "all"
+      ? skills
+      : skills.filter((skill) => skill.category === selectedCategory);
 
   function getChangeStyle(percentage) {
     return percentage.startsWith("-") ? "red" : "green";
@@ -266,6 +282,56 @@ function App() {
               element={
                 <>
                   <div className="skills-list">
+                    {/* The filter row */}
+                    <div>
+                      <label>
+                        <input
+                          type="radio"
+                          value="all"
+                          checked={selectedCategory === "all"}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        All
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          value="technology"
+                          checked={selectedCategory === "technology"}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        Technology
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          value="finance"
+                          checked={selectedCategory === "finance"}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        Finance
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          value="healthcare"
+                          checked={selectedCategory === "healthcare"}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        Healthcare
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          value="education"
+                          checked={selectedCategory === "education"}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                        />
+                        Education
+                      </label>
+                    </div>
+
+                    {/* The header row */}
                     <div className="header-row">
                       <span>Rank (#)</span>
                       <span>Skill Name</span>
@@ -277,7 +343,8 @@ function App() {
                       <span>Total Openings</span>
                       <span>Total # of Workers</span>
                     </div>
-                    {skills.map((skill, index) => (
+
+                    {filteredSkills.map((skill, index) => (
                       <Link
                         className="skill-link"
                         to={`/details/${skill.name
