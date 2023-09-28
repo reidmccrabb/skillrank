@@ -278,7 +278,7 @@ function App() {
           <h1>
             <Link to="/" className="home-link">   {/* Added this Link */}
               <img src="/rank.png" alt="Rank Icon" className="rank-icon" />
-              Skill Rank
+              Live Skill Watch
             </Link>
           </h1>
           <Routes>
