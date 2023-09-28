@@ -20,8 +20,6 @@ body {
   padding-left: 20px;  /* Add some space from the left edge */
 }
 
-
-
 h1 {
   margin-bottom: 20px;
 }
@@ -29,24 +27,21 @@ h1 {
 .skills-list {
   width: 100%; /* Set to 100% for full width */
   border: 1px solid #FFF;
-
 }
 
 .skill-item, .header-row {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  border-bottom: 1px solid #000000;
+
+  border-top: 1px solid #F0F2F5;  /* Added this line */
   font-weight: bold;
 }
 
 .header-row {
   font-weight: bold;
   background-color: #FFF;
-}
-
-.skill-item:last-child {
-  border-bottom: none;
+  border-top: none; /* Remove the top border for the header row */
 }
 
 .rank, .header-row > span:nth-child(1) {
