@@ -90,6 +90,11 @@ h1 {
 .rank-icon {
   height: 24px; /* Adjust the height as required */
   width: auto;
+  margin-right: 4px;
   /* Add some spacing between the icon and text */
   vertical-align: middle; /* Aligns the image vertically in line with the text */
+}
+.home-link {
+  text-decoration: none;
+  color: inherit; /* this will ensure it keeps the current color of its parent/container */
 }
