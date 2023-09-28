@@ -38,7 +38,11 @@ function DetailsPage({ skills }) {
 
             <div className="courses-section">
                 <h3>Courses on {skill.name}</h3>
-                {/* Add your courses content here */}
+                <ul className="courses-list">
+                    <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Become a {skill.name} - Udemy</a></li>
+                    <li><a href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">What every {skill.name} Learns - Coursera</a></li>
+                    <li><a href="https://www.useskillflow.com/" target="_blank" rel="noopener noreferrer">{skill.name} Fundamentals - Skillflow</a></li>
+                </ul>
             </div>
         </div>
     );
