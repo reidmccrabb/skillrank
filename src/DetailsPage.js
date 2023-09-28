@@ -17,6 +17,11 @@ function DetailsPage({ skills }) {
                 <p>Avg. Salary: {skill.avgSalary}</p>
                 <p>1 Day % Change: {skill.oneDayChange}</p>
                 <p>7 Day % Change: {skill.sevenDayChange}</p>
+                <p>1 Year % Change: {skill.oneYearChange}</p>
+                <p>Total Market Cap: {skill.marketValue}</p>
+                <p>Total Openings: {skill.openings}</p>
+                <p>Total # of Workers: {skill.workers}</p>
+
                 {/* ... add more details here */}
             </div>
 
