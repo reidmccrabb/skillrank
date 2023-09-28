@@ -112,7 +112,8 @@ function App() {
       setSkills(prevSkills => 
         prevSkills.map(skill => ({
           ...skill,
-          avgSalary: `$${(parseFloat(skill.avgSalary.replace('$', '').replace(',', '')) + Math.random() * 500 - 250).toFixed(2)}`,
+          avgSalary: `$${(parseFloat(skill.avgSalary.replace('$', '').replace(',', '')) + Math.random() * 500 - 250).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`,
+
           oneDayChange: `${(parseFloat(skill.oneDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
           sevenDayChange: `${(parseFloat(skill.sevenDayChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
           oneYearChange: `${(parseFloat(skill.oneYearChange) + Math.random() * 0.4 - 0.2).toFixed(2)}%`,
