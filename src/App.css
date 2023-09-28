@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
@@ -9,15 +9,15 @@ body {
 }
 
 .App-header {
-  background-color: #FFF;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* Align items to the left */
-  justify-content: flex-start;  /* Start items from the top */
+  align-items: flex-start; /* Align items to the left */
+  justify-content: flex-start; /* Start items from the top */
   font-size: calc(-3px + 2vmin);
   color: #333;
-  padding-left: 20px;  /* Add some space from the left edge */
+  padding-left: 20px; /* Add some space from the left edge */
 }
 
 h1 {
@@ -26,46 +26,50 @@ h1 {
 
 .skills-list {
   width: 100%; /* Set to 100% for full width */
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 
-.skill-item, .header-row {
+.skill-item,
+.header-row {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  border-top: 1px solid #F0F2F5;  /* Added this line */
+  border-top: 1px solid #f0f2f5; /* Added this line */
   font-weight: bold;
 }
 
 .header-row {
   font-weight: bold;
-  background-color: #FFF;
+  background-color: #fff;
   border-top: none; /* Remove the top border for the header row */
 }
 
-.rank, .header-row > span:nth-child(1) {
+.rank,
+.header-row > span:nth-child(1) {
   flex: 1;
   font-weight: bold;
 }
 
-.skill-item .rank {       /* New style for the actual rank numbers */
+.skill-item .rank {
+  /* New style for the actual rank numbers */
   font-weight: normal;
-  color: #716f6f;  /* light gray color */
+  color: #716f6f; /* light gray color */
 }
 
-.skill-name, .header-row > span:nth-child(2) {
+.skill-name,
+.header-row > span:nth-child(2) {
   flex: 3;
 }
 
 /* Make sure other columns also have matching flex values. For simplicity, let's assume each of the other columns also takes up flex of 1 */
-.header-row > span:not(:nth-child(1)):not(:nth-child(2)), 
+.header-row > span:not(:nth-child(1)):not(:nth-child(2)),
 .skill-item > span:not(.rank):not(.skill-name) {
   flex: 1;
 }
 .skill-icon {
-  height: 20px;           /* Adjust the height as required */
+  height: 20px; /* Adjust the height as required */
   width: auto;
-  margin-right: 8px;      /* Add some spacing between the icon and skill name */
+  margin-right: 8px; /* Add some spacing between the icon and skill name */
 }
 .skills-list a {
   text-decoration: none;
@@ -73,13 +77,19 @@ h1 {
 }
 
 .skill-item:hover {
-  background-color: #f5f5f5;  /* or any other color you prefer for hover effect */
+  background-color: #f5f5f5; /* or any other color you prefer for hover effect */
 }
 
 .red {
-  color: #D8494A;
+  color: #d8494a;
 }
 
 .green {
-  color: #5CC489;
+  color: #5cc489;
+}
+.rank-icon {
+  height: 24px; /* Adjust the height as required */
+  width: auto;
+  /* Add some spacing between the icon and text */
+  vertical-align: middle; /* Aligns the image vertically in line with the text */
 }

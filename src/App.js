@@ -275,7 +275,10 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Skill Rank</h1>
+          <h1>
+            <img src="/rank.png" alt="Rank Icon" className="rank-icon" /> Skill
+            Rank
+          </h1>
           <Routes>
             <Route
               path="/"
