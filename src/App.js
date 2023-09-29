@@ -18,6 +18,17 @@ function App() {
       category: "technology",
     },
     {
+      name: "Van Builder",
+      avgSalary: "$300,311",
+      oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
+      sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
+      oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
+      marketValue: "$2B",
+      openings: "10,000",
+      workers: "510,230",
+      category: "technology",
+    },
+    {
       name: "Web Developer",
       avgSalary: "$230,043",
       oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
@@ -30,7 +41,7 @@ function App() {
     },
     {
       name: "Brain Surgeon",
-      avgSalary: "$192,040",
+      avgSalary: "$492,040",
       oneDayChange: `${(Math.random() * 4 - 2).toFixed(2)}%`,
       sevenDayChange: `${(Math.random() * 10 - 5).toFixed(2)}%`,
       oneYearChange: `${(Math.random() * 20 - 10).toFixed(2)}%`,
@@ -365,6 +376,8 @@ function App() {
                                 ? "webdev.png"
                                 : skill.name === "UX/UI Designer"
                                 ? "ui.png"
+                                : skill.name === "Van Builder"
+                                ? "delivery.png"
                                 : skill.name === "Financial Analyst"
                                 ? "finance.png"
                                 : skill.name === "Chef"
